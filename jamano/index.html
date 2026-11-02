@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Jamano · Selecter dancehall e reggae a Bari</title>
+<meta name="description" content="Jamano, selecter a Bari dalla metà degli anni '90: dancehall, reggae e jam. Serate, locali, eventi privati. Prenota su WhatsApp.">
+<meta name="theme-color" content="#15120E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315120E'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23F7C948' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23E0372B'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:'Slab';font-weight:400;font-display:swap;src:url(fonts/alfa-slab-one-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Archivo';font-weight:400;font-display:swap;src:url(fonts/archivo-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Archivo';font-weight:600;font-display:swap;src:url(fonts/archivo-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Archivo';font-weight:800;font-display:swap;src:url(fonts/archivo-latin-800-normal.woff2) format('woff2')}
+:root{--ink:#15120E;--ink2:#211C16;--ink3:#2E271F;--sun:#F7C948;--red:#E0372B;--green:#2BA14E;--paper:#F3EAD7;--muted:#B8AC96}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font:400 17px/1.6 'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:'Slab',Georgia,serif;font-weight:400;line-height:.95}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.stripe{height:8px;background:linear-gradient(90deg,var(--green) 0 33.3%,var(--sun) 33.3% 66.6%,var(--red) 66.6%)}
+
+/* top */
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:74px}
+.logo{font-family:'Slab';font-size:22px;text-decoration:none;color:var(--sun)}
+.top nav{display:flex;gap:24px;font-weight:600;font-size:15px;align-items:center}
+.top nav a{text-decoration:none;opacity:.85}.top nav a:hover{color:var(--sun);opacity:1}
+.nav-cta{background:var(--sun);color:var(--ink)!important;padding:9px 16px;border-radius:6px;opacity:1!important}
+@media(max-width:760px){.top nav a:not(.nav-cta){display:none}}
+
+/* hero: flyer + sound system */
+.hero{position:relative;padding:40px 0 90px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;opacity:.07;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;position:relative}
+@media(max-width:920px){.hero .wrap{grid-template-columns:1fr}}
+.since{display:inline-block;font:800 14px 'Archivo';background:var(--red);color:var(--paper);padding:6px 12px;transform:rotate(-2deg)}
+.name{font-size:clamp(72px,10.5vw,150px);color:var(--sun);margin-top:14px;letter-spacing:-.01em;
+  text-shadow:6px 6px 0 var(--red),12px 12px 0 var(--green)}
+.name.bump{animation:bump .16s ease-out}
+@keyframes bump{50%{transform:translateY(-3px)}}
+.role{font-family:'Slab';font-size:clamp(24px,3vw,36px);margin-top:18px}
+.lede{margin-top:16px;font-size:19px;max-width:32em;color:var(--paper)}
+.lede b{color:var(--sun);font-weight:800}
+.cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:800 16px 'Archivo';text-decoration:none;border:0;cursor:pointer;padding:15px 22px;border-radius:6px;transition:transform .12s}
+.btn:active{transform:scale(.96)}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.btn-wa{background:#25D366;color:#06301A}
+.btn-line{background:transparent;color:var(--paper);box-shadow:inset 0 0 0 2px var(--paper)}
+.btn-line:hover{color:var(--sun);box-shadow:inset 0 0 0 2px var(--sun)}
+
+/* sound system */
+.sys{background:var(--ink2);border:3px solid #3a3226;border-radius:14px;padding:20px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.sys-top{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--muted)}
+.sys-top b{font:400 28px 'Slab';color:var(--paper)}
+.stack{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.box{background:#0e0c09;border-radius:8px;padding:12px;display:grid;gap:10px;justify-items:center;box-shadow:inset 0 0 0 2px #2b251c}
+.cone{width:100%;max-width:150px;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,#3b342a 0 14%,#0b0a08 15% 18%,#2a241c 19% 46%,#0b0a08 47% 52%,#1d1912 53% 66%,#0b0a08 67%);
+  box-shadow:0 0 0 6px #1a1610,0 0 0 8px #3a3226;transition:transform .05s}
+.cone.small{max-width:70px}
+.cone.hit{animation:cone .18s ease-out}
+@keyframes cone{30%{transform:scale(1.07)}}
+.row2{display:flex;gap:10px}
+.lbl{font:800 11px 'Archivo';color:var(--muted);letter-spacing:.06em}
+.pads{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.pad{font:400 17px 'Slab';border:0;border-radius:8px;padding:16px 8px;cursor:pointer;color:var(--ink);transition:transform .1s,filter .2s}
+.pad:active{transform:scale(.95)}
+.pad.play{background:var(--paper)}
+.pad.horn{background:var(--sun)}
+.pad.rew{background:var(--red);color:var(--paper)}
+.pad[disabled]{opacity:.4;cursor:not-allowed}
+.knob{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;margin-top:14px;font:800 13px 'Archivo';color:var(--muted)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:5px;background:linear-gradient(90deg,var(--green),var(--sun),var(--red));cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:34px;border-radius:5px;background:var(--paper);border:3px solid var(--ink)}
+input[type=range]::-moz-range-thumb{width:18px;height:30px;border-radius:5px;background:var(--paper);border:3px solid var(--ink)}
+.hint{text-align:center;font-size:13px;color:var(--muted);margin-top:12px;min-height:2.6em}
+.pullup{position:fixed;inset:0;display:grid;place-items:center;pointer-events:none;z-index:50;font:400 clamp(60px,14vw,180px) 'Slab';color:var(--sun);text-shadow:6px 6px 0 var(--red);opacity:0}
+.pullup.on{animation:pull .9s ease-out}
+@keyframes pull{0%{opacity:0;transform:scale(.6) rotate(-6deg)}25%{opacity:1;transform:scale(1.05) rotate(-3deg)}100%{opacity:0;transform:scale(1.2) rotate(-3deg)}}
+
+/* sections */
+section.s{padding:100px 0}
+.s h2{font-size:clamp(42px,6vw,76px);color:var(--sun)}
+.s .intro{margin-top:16px;color:var(--muted);font-size:18px;max-width:38em}
+.story{background:var(--paper);color:var(--ink)}
+.story h2{color:var(--ink)}
+.story .intro{color:#4a4134}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px}
+@media(max-width:860px){.story-grid{grid-template-columns:1fr}}
+.quote{font:400 clamp(28px,3.4vw,42px)/1.15 'Slab';color:var(--red)}
+.facts{display:grid;gap:14px}
+.fact{border-left:6px solid var(--green);padding:6px 0 6px 16px}
+.fact:nth-child(2){border-color:var(--sun)}.fact:nth-child(3){border-color:var(--red)}
+.fact b{display:block;font:400 26px 'Slab'}
+.fact span{color:#4a4134}
+
+/* flyers */
+.flyers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+@media(max-width:920px){.flyers{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.flyers{grid-template-columns:1fr}}
+.flyer{padding:24px 20px 22px;border-radius:4px;color:var(--ink);transform:rotate(var(--r));box-shadow:0 14px 30px rgba(0,0,0,.4);transition:transform .2s}
+.flyer:hover{transform:rotate(0) translateY(-4px)}
+.flyer h3{font-size:28px;line-height:1}
+.flyer p{margin-top:10px;font-size:15px}
+.flyer:nth-child(1){background:var(--sun);--r:-2deg}
+.flyer:nth-child(2){background:var(--paper);--r:1.5deg}
+.flyer:nth-child(3){background:var(--green);color:var(--paper);--r:-1deg}
+.flyer:nth-child(4){background:var(--red);color:var(--paper);--r:2deg}
+
+.genres{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px}
+.genres span{font:400 clamp(20px,2.6vw,30px) 'Slab';padding:6px 16px;border:3px solid currentColor;border-radius:6px}
+.genres span:nth-child(3n+1){color:var(--sun)}.genres span:nth-child(3n+2){color:var(--green)}.genres span:nth-child(3n){color:var(--red)}
+
+/* booking */
+.book{background:var(--ink2)}
+.book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;margin-top:40px;align-items:start}
+@media(max-width:860px){.book-grid{grid-template-columns:1fr}}
+.card{background:var(--ink);border:3px solid #3a3226;border-radius:12px;padding:28px}
+.card h3{font-size:28px;color:var(--sun)}
+.card p{color:var(--muted);margin-top:8px}
+form{display:grid;gap:14px;margin-top:18px}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.r2{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font-weight:600;font-size:14px;color:var(--muted)}
+input:not([type=range]),select,textarea{font:400 16px 'Archivo';color:var(--paper);background:var(--ink3);border:2px solid transparent;border-radius:8px;padding:13px 14px;width:100%}
+input:not([type=range]):focus,select:focus,textarea:focus{border-color:var(--sun);outline:none}
+textarea{min-height:90px}
+form .btn{justify-content:center}
+
+footer{padding:40px 0 110px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+footer a{color:var(--paper)}
+.wa-float{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.45);z-index:20}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+<div class="stripe"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">Jamano</a>
+    <nav aria-label="Menu">
+      <a href="#storia">Storia</a>
+      <a href="#serate">Serate</a>
+      <a class="nav-cta" href="#prenota">Prenota</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="since">Selecter a Bari dalla metà degli anni '90</span>
+      <h1 class="name" id="name">Jamano</h1>
+      <p class="role">Dancehall · Reggae · Jam</p>
+      <p class="lede">Da sempre innamorato della musica. Dalla metà degli anni '90 seleziona dancehall e reggae nelle jam e nelle serate in giro per Bari. <b>Quando parte il riddim, la sala si muove.</b></p>
+      <div class="cta">
+        <a class="btn btn-wa js-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg>Scrivi su WhatsApp</a>
+        <a class="btn btn-line" href="https://www.facebook.com/jamano4real" target="_blank" rel="noopener">Seguimi su Facebook</a>
+      </div>
+    </div>
+
+    <div class="sys" aria-label="Sound system interattivo">
+      <div class="sys-top"><span>Il sound system</span><span><b id="bpm">96</b> BPM</span></div>
+      <div class="stack">
+        <div class="box"><div class="cone" data-c></div><div class="row2"><div class="cone small" data-c></div><div class="cone small" data-c></div></div><span class="lbl">LEFT</span></div>
+        <div class="box"><div class="cone" data-c></div><div class="row2"><div class="cone small" data-c></div><div class="cone small" data-c></div></div><span class="lbl">RIGHT</span></div>
+      </div>
+      <div class="pads">
+        <button class="pad play" id="play" aria-pressed="false">▶ Riddim</button>
+        <button class="pad horn" id="horn">Air horn</button>
+        <button class="pad rew" id="rew" disabled>Rewind</button>
+      </div>
+      <label class="knob">Bassi<input type="range" id="flt" min="0" max="100" value="100" aria-label="Filtro"></label>
+      <p class="hint" id="hint">Fai partire il riddim, poi suona la sirena e chiama il rewind</p>
+    </div>
+  </div>
+</section>
+<div class="stripe"></div>
+
+<section class="s story" id="storia">
+  <div class="wrap">
+    <h2>Dalla metà degli anni '90</h2>
+    <p class="intro">Prima di tutto la musica. Poi la strada: jam, dancehall, serate in giro per Bari, una selezione dopo l'altra.</p>
+    <div class="story-grid">
+      <p class="quote">«Da sempre innamorato della musica.»</p>
+      <div class="facts">
+        <div class="fact"><b>Selecter</b><span>Sceglie il pezzo giusto per il momento giusto: è il mestiere del selecter nella cultura sound system.</span></div>
+        <div class="fact"><b>Dancehall e reggae</b><span>Dalle radici reggae alla dancehall di oggi, con le jam come casa.</span></div>
+        <div class="fact"><b>Bari</b><span>Una vita di serate in città: la pista la conosce bene.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="serate">
+  <div class="wrap">
+    <h2>Le serate</h2>
+    <p class="intro">Dal locale alla festa privata: porta la selezione e l'energia del sound system.</p>
+    <div class="flyers">
+      <article class="flyer"><h3>Dancehall night</h3><p>Una serata intera di dancehall per far ballare tutto il locale.</p></article>
+      <article class="flyer"><h3>Reggae &amp; roots</h3><p>Le radici: one drop, roots e classici per aperitivi e serate più calde.</p></article>
+      <article class="flyer"><h3>Jam session</h3><p>Musica dal vivo, MC e selezione: l'atmosfera delle jam baresi.</p></article>
+      <article class="flyer"><h3>Feste private</h3><p>Compleanni ed eventi con la musica che fa muovere tutti.</p></article>
+    </div>
+    <div class="genres"><span>Dancehall</span><span>Reggae</span><span>Roots</span><span>Afrobeats</span><span>Jam</span><span>Old school</span></div>
+  </div>
+</section>
+
+<section class="s book" id="prenota">
+  <div class="wrap">
+    <h2>Chiama il selecter</h2>
+    <p class="intro">Scrivi data, posto e tipo di serata: risposta su WhatsApp con disponibilità e prezzo.</p>
+    <div class="book-grid">
+      <div class="card">
+        <h3>Per locali e organizzatori</h3>
+        <p>Serate fisse, eventi a tema dancehall o reggae, jam con MC e musicisti. Scrivimi e ne parliamo.</p>
+        <a class="btn btn-line" href="https://www.facebook.com/jamano4real" target="_blank" rel="noopener" style="margin-top:18px">Pagina Facebook</a>
+      </div>
+      <div class="card">
+        <h3>Prenota una data</h3>
+        <form id="bookForm">
+          <div class="r2">
+            <label>Data<input type="date" name="data" required></label>
+            <label>Tipo di serata
+              <select name="tipo" required><option value="">Scegli</option><option>Dancehall night</option><option>Reggae / roots</option><option>Jam session</option><option>Festa privata</option><option>Altro</option></select>
+            </label>
+          </div>
+          <div class="r2">
+            <label>Locale o luogo<input name="luogo" placeholder="Es. Bari, centro"></label>
+            <label>Persone<input type="number" name="ospiti" min="1" placeholder="Es. 100"></label>
+          </div>
+          <label>Note<textarea name="note" placeholder="Orari, impianto, MC, richieste…"></textarea></label>
+          <button class="btn btn-wa" type="submit">Invia su WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<div class="stripe"></div>
+<footer>
+  <div class="wrap">
+    <span><b style="font-family:'Slab';color:var(--sun);font-weight:400">Jamano</b> · Selecter a Bari</span>
+    <span>Sito realizzato da <a href="https://clickbari.it" target="_blank" rel="noopener">ClickBari</a></span>
+  </div>
+</footer>
+<div class="pullup" id="pullup" aria-hidden="true">Pull up!</div>
+<a class="wa-float js-wa" href="#" target="_blank" rel="noopener" aria-label="Scrivi a Jamano su WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></a>
+
+<script>
+const WA='390000000000'; // numero di Jamano da inserire
+const waLink=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+document.querySelectorAll('.js-wa').forEach(a=>a.href=waLink('Ciao Jamano! Ho visto il tuo sito e vorrei informazioni per una serata.'));
+document.getElementById('bookForm').addEventListener('submit',e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));
+  const d=f.data?new Date(f.data).toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long'}):'';
+  window.open(waLink(`Ciao Jamano! Vorrei prenotarti.\n• Data: ${d}\n• Serata: ${f.tipo}`+(f.luogo?`\n• Dove: ${f.luogo}`:'')+(f.ospiti?`\n• Persone: ${f.ospiti}`:'')+(f.note?`\n• Note: ${f.note}`:'')),'_blank')});
+
+/* ===== Sound system: riddim generato nel browser ===== */
+let ctx,master,filter,rev,NB,playing=false,step=0,nextTime=0,timer,bar=0,paused=false;
+const BPM=96,playB=document.getElementById('play'),hornB=document.getElementById('horn'),rewB=document.getElementById('rew'),hint=document.getElementById('hint'),flt=document.getElementById('flt');
+const cones=[...document.querySelectorAll('[data-c]')],nameEl=document.getElementById('name'),pull=document.getElementById('pullup');
+const mtof=m=>440*Math.pow(2,(m-69)/12);
+function init(){ctx=new (window.AudioContext||window.webkitAudioContext)();
+  const comp=ctx.createDynamicsCompressor();comp.threshold.value=-12;comp.ratio.value=4;
+  master=ctx.createGain();master.gain.value=.9;filter=ctx.createBiquadFilter();filter.type='lowpass';filter.Q.value=4;filter.frequency.value=100*Math.pow(180,flt.value/100);
+  master.connect(comp).connect(filter).connect(ctx.destination);
+  const n=ctx.sampleRate*1.8,b=ctx.createBuffer(2,n,ctx.sampleRate);for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,3)}
+  rev=ctx.createConvolver();rev.buffer=b;const rg=ctx.createGain();rg.gain.value=.5;rev.connect(rg).connect(master);
+  const nb=ctx.createBuffer(1,ctx.sampleRate,ctx.sampleRate),dd=nb.getChannelData(0);for(let i=0;i<dd.length;i++)dd[i]=Math.random()*2-1;NB=nb;}
+flt.addEventListener('input',()=>{if(filter)filter.frequency.setTargetAtTime(100*Math.pow(180,flt.value/100),ctx.currentTime,.05)});
+function vca(t,g,a,dur,send){const v=ctx.createGain();v.gain.setValueAtTime(.0001,t);v.gain.linearRampToValueAtTime(g,t+a);v.gain.exponentialRampToValueAtTime(.0001,t+dur);v.connect(master);if(send){const s=ctx.createGain();s.gain.value=send;v.connect(s);s.connect(rev)}return v}
+function kick(t,g){const o=ctx.createOscillator();o.frequency.setValueAtTime(140,t);o.frequency.exponentialRampToValueAtTime(48,t+.1);o.connect(vca(t,g,.002,.4));o.start(t);o.stop(t+.45)}
+function snare(t,g){const s=ctx.createBufferSource(),f=ctx.createBiquadFilter();s.buffer=NB;f.type='bandpass';f.frequency.value=1800;f.Q.value=.9;s.connect(f).connect(vca(t,g,.001,.18,.35));s.start(t,Math.random()*.5);s.stop(t+.2);
+  const o=ctx.createOscillator();o.type='triangle';o.frequency.value=190;o.connect(vca(t,g*.5,.001,.08));o.start(t);o.stop(t+.1)}
+function hat(t,g){const s=ctx.createBufferSource(),f=ctx.createBiquadFilter();s.buffer=NB;f.type='highpass';f.frequency.value=8000;s.connect(f).connect(vca(t,g,.001,.05));s.start(t,Math.random()*.5);s.stop(t+.06)}
+function bass(t,g,n,dur){const o=ctx.createOscillator(),f=ctx.createBiquadFilter();o.type='sine';o.frequency.value=mtof(n);const o2=ctx.createOscillator();o2.type='triangle';o2.frequency.value=mtof(n);
+  f.type='lowpass';f.frequency.value=380;o.connect(vca(t,g,.01,dur));o2.connect(f).connect(vca(t,g*.5,.01,dur));o.start(t);o2.start(t);o.stop(t+dur+.05);o2.stop(t+dur+.05)}
+function skank(t,g,notes){const f=ctx.createBiquadFilter();f.type='bandpass';f.frequency.value=1100;f.Q.value=.7;f.connect(vca(t,g,.003,.13,.25));
+  notes.forEach(n=>{const o=ctx.createOscillator();o.type='square';o.frequency.value=mtof(n);o.connect(f);o.start(t);o.stop(t+.15)})}
+// riddim in Re minore: Dm – Gm – Bb – A
+const CH=[[62,65,69],[62,67,70],[62,65,70],[61,64,69]], BL=[[38,0],[38,3],[41,6],[43,10],[45,14]], ROOTS=[0,5,-4,-5];
+function sched(s,t){
+  if(paused)return;
+  const k=bar%4;
+  if(s===0||s===7||s===10){kick(t,.95);if(s===0||s===10)thump(t)}
+  if(s===4||s===12)snare(t,.5);
+  if(s%2===0)hat(t,s%4===2?.07:.04);
+  if(s%4===2)skank(t,.16,CH[k]);
+  BL.forEach(([n,st])=>{if(st===s)bass(t,.55,n+ROOTS[k],.32)});
+  if(s===15)bar++;
+}
+function thump(t){const ms=Math.max(0,(t-ctx.currentTime)*1000-15);setTimeout(()=>{cones.forEach(c=>{c.classList.remove('hit');void c.offsetWidth;c.classList.add('hit')});nameEl.classList.remove('bump');void nameEl.offsetWidth;nameEl.classList.add('bump')},ms)}
+function loop(){const spb=60/BPM/4;while(nextTime<ctx.currentTime+.12){sched(step,nextTime);nextTime+=spb;step=(step+1)%16}}
+
+/* Air horn: la sirena del sound system */
+function horn(){if(!ctx)init();if(ctx.state==='suspended')ctx.resume();const t0=ctx.currentTime+.02;
+  [[0,.12],[.16,.12],[.32,.12],[.5,.7]].forEach(([o,d])=>{const t=t0+o,ws=ctx.createWaveShaper(),c=new Float32Array(256);for(let i=0;i<256;i++){const x=i/128-1;c[i]=Math.tanh(3*x)}ws.curve=c;
+    const v=vca(t,.32,.01,d,.5);ws.connect(v);[0,7,12].forEach((iv,j)=>{const osc=ctx.createOscillator();osc.type='sawtooth';osc.frequency.setValueAtTime(mtof(70+iv)*1.04,t);osc.frequency.linearRampToValueAtTime(mtof(70+iv)*.97,t+d);osc.detune.value=j*6;osc.connect(ws);osc.start(t);osc.stop(t+d+.05)})});
+  hint.textContent='Bo bo bo! Questa è la sirena del sound system';}
+hornB.addEventListener('click',horn);
+
+/* Rewind: il pubblico chiede di ricominciare il pezzo */
+rewB.addEventListener('click',()=>{if(!playing||paused)return;paused=true;const t=ctx.currentTime;
+  const o=ctx.createOscillator(),lfo=ctx.createOscillator(),lg=ctx.createGain();o.type='sawtooth';o.frequency.setValueAtTime(900,t);o.frequency.exponentialRampToValueAtTime(60,t+1.1);
+  lfo.frequency.value=14;lg.gain.value=120;lfo.connect(lg).connect(o.frequency);o.connect(vca(t,.25,.01,1.2,.4));o.start(t);lfo.start(t);o.stop(t+1.25);lfo.stop(t+1.25);
+  const s=ctx.createBufferSource(),f=ctx.createBiquadFilter();s.buffer=NB;f.type='bandpass';f.frequency.setValueAtTime(4000,t);f.frequency.exponentialRampToValueAtTime(300,t+1.1);s.connect(f).connect(vca(t,.3,.01,1.2));s.start(t);s.stop(t+1.25);
+  document.querySelectorAll('.cone:not(.small)').forEach(c=>c.style.transform='rotate(-30deg)');
+  pull.classList.remove('on');void pull.offsetWidth;pull.classList.add('on');hint.textContent='Pull up! Rewind… si riparte da capo';
+  setTimeout(()=>{horn();step=0;bar=0;nextTime=ctx.currentTime+.6;paused=false;document.querySelectorAll('.cone').forEach(c=>c.style.transform='')},1300);});
+
+playB.addEventListener('click',async()=>{if(!ctx)init();if(ctx.state==='suspended')await ctx.resume();
+  playing=!playing;playB.setAttribute('aria-pressed',playing);playB.textContent=playing?'❚❚ Stop':'▶ Riddim';rewB.disabled=!playing;
+  hint.textContent=playing?'Ora suona la sirena (Air horn) o chiama il Rewind':'Fai partire il riddim, poi suona la sirena e chiama il rewind';
+  if(playing){step=0;bar=0;paused=false;nextTime=ctx.currentTime+.05;timer=setInterval(loop,25)}else clearInterval(timer)});
+</script>
+</body>
+</html>
